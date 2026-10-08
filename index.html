@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A lightweight Firefox extension that lets you choose which signed-in Google account to use before opening YouTube.">
+    <meta name="color-scheme" content="dark">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; connect-src 'none'">
+    <title>yt-profile-picker — Choose your YouTube account</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header wrap">
+      <a class="brand" href="#main">
+        <img src="assets/favicon.png" width="32" height="32" alt="YT Profile Picker icon">
+        <span>yt-profile-picker</span>
+      </a>
+      <a class="header-link" href="#how-it-works">How it works</a>
+    </header>
+
+    <main id="main" class="wrap">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-card">
+          <img class="hero-icon" src="assets/favicon.png" width="64" height="64" alt="YT Profile Picker icon">
+          <p class="eyebrow">Firefox extension</p>
+          <h1 id="hero-title">Choose your account before opening YouTube.</h1>
+          <p class="hero-description">A lightweight Firefox extension that lets you choose which signed-in Google account to use before opening YouTube.</p>
+          <div class="actions">
+            <!-- AMO LISTING URL PLACEHOLDER: after approval, replace the Get the extension href with the verified Mozilla Add-ons listing URL. -->
+            <a class="button button-primary" href="https://github.com/OshankKashyap/yt-profile-picker/releases">Get the extension</a>
+            <a class="button button-secondary" href="https://github.com/OshankKashyap/yt-profile-picker">View source</a>
+          </div>
+          <p class="publication-note">Mozilla Add-ons listing pending approval.<br>Get the current release on GitHub.</p>
+          <div class="hero-meta"><span>v1.1.3</span><span>Firefox 140.0+</span><span>GPL-3.0</span></div>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="section" aria-labelledby="how-title">
+        <h2 id="how-title">How it works</h2>
+        <ol class="steps grid-three">
+          <li class="panel"><span class="step-number" aria-hidden="true">1</span><h3>Open YouTube</h3><p>By default, a new visit to YouTube opens the picker when multiple signed-in accounts are detected.</p></li>
+          <li class="panel"><span class="step-number" aria-hidden="true">2</span><h3>Choose an account</h3><p>Select a profile in the picker, or press its number from 1 to 9.</p></li>
+          <li class="panel"><span class="step-number" aria-hidden="true">3</span><h3>Continue in the same tab</h3><p>The requested YouTube page opens with the selected account.</p></li>
+        </ol>
+      </section>
+
+      <section class="section" aria-labelledby="features-title">
+        <h2 id="features-title">Features</h2>
+        <!-- Verified against picker/picker.js, background.js, popup/popup.js and options/options.js. -->
+        <ul class="feature-list">
+          <li class="feature"><h3>Keyboard selection</h3><p>Use <kbd>1</kbd>–<kbd>9</kbd> for the first nine profiles, arrow keys to move, and <kbd>Enter</kbd> or <kbd>Space</kbd> to select. <kbd>Esc</kbd> continues without switching.</p></li>
+          <li class="feature"><h3>Account badges</h3><p>The picker marks the last-used account, or the current account when it is not the last-used one. The last-used account receives initial focus.</p></li>
+          <li class="feature"><h3>Control when prompts appear</h3><p>Ask on new visits, include internal YouTube navigations, or disable prompts. By default, in-site navigation does not prompt.</p></li>
+          <li class="feature"><h3>Automatic or on-demand refresh</h3><p>Check profiles in the background every 10, 15, 20, 30, 45, or 60 minutes, or turn scheduled checks off. Refresh profiles directly from the picker.</p></li>
+          <li class="feature"><h3>Toolbar account access</h3><p>Select an account from the toolbar popup to open YouTube’s home page in a new tab.</p></li>
+          <li class="feature"><h3>YouTube Music support</h3><p>Enable or disable the account picker for YouTube Music in settings.</p></li>
+          <li class="feature"><h3>Continue without switching</h3><p>Skip account selection from the picker. When zero or one signed-in account is confirmed, YouTube opens without a choice screen.</p></li>
+        </ul>
+      </section>
+
+      <section class="section" aria-labelledby="requirements-title">
+        <h2 id="requirements-title">Requirements</h2>
+        <div class="panel requirements">
+          <!-- Firefox minimum: manifest.json browser_specific_settings.gecko.strict_min_version. Account count: background.js and picker/picker.js. -->
+          <dl><div><dt>Browser</dt><dd>Firefox 140.0 or later.</dd></div><div><dt>Accounts</dt><dd>Multiple signed-in Google accounts are needed for an account choice. The extension uses your existing signed-in YouTube session.</dd></div></dl>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="screenshots-title">
+        <h2 id="screenshots-title">Screenshots</h2>
+        <p class="section-intro">Screenshot placeholders for the extension’s three screens.</p>
+        <div class="grid-three screenshots">
+          <figure class="panel screenshot">
+            <!-- SCREENSHOT SLOT: replace assets/screenshots/picker.png with the account picker screenshot; no layout changes needed. -->
+            <img src="assets/screenshots/picker.png" width="800" height="600" alt="Screenshot slot: account picker with profile choices, account badges, and Refresh profiles.">
+            <figcaption><h3>Account picker</h3><p>Profile choices, account badges, and refresh controls.</p><span class="placeholder-label">Screenshot placeholder</span></figcaption>
+          </figure>
+          <figure class="panel screenshot">
+            <!-- SCREENSHOT SLOT: replace assets/screenshots/settings.png with the settings screenshot; no layout changes needed. -->
+            <img src="assets/screenshots/settings.png" width="800" height="600" alt="Screenshot slot: settings with prompting behavior, YouTube Music support, and account refresh preferences.">
+            <figcaption><h3>Settings</h3><p>Prompting behavior, Music support, and refresh preferences.</p><span class="placeholder-label">Screenshot placeholder</span></figcaption>
+          </figure>
+          <figure class="panel screenshot">
+            <!-- SCREENSHOT SLOT: replace assets/screenshots/popup.png with the toolbar popup screenshot; no layout changes needed. -->
+            <img src="assets/screenshots/popup.png" width="800" height="600" alt="Screenshot slot: toolbar popup listing accounts that open YouTube home in a new tab.">
+            <figcaption><h3>Toolbar popup</h3><p>Account choices for opening YouTube home in a new tab.</p><span class="placeholder-label">Screenshot placeholder</span></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="releases-title">
+        <h2 id="releases-title">Release notes</h2>
+        <div class="release-list">
+          <!-- Prepend newer release articles here. No unverified version-specific changelog is included. -->
+          <article class="panel release" aria-labelledby="release-113">
+            <div class="release-heading"><h3 id="release-113">v1.1.3</h3><time datetime="2026-10-07">7 October 2026</time></div>
+            <p>Current release. Licensed under GPL-3.0.</p>
+            <p>Submitted to Mozilla Add-ons; listing pending approval.</p>
+            <a href="https://github.com/OshankKashyap/yt-profile-picker/releases">View releases on GitHub</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer wrap">
+      <div class="footer-row"><p>yt-profile-picker · GPL-3.0</p><a href="https://github.com/OshankKashyap/yt-profile-picker">Source repository</a></div>
+      <!-- AMO LISTING URL PLACEHOLDER: replace the pending text below with a link after the listing is approved and its URL verified. -->
+      <p>Mozilla Add-ons: pending approval.</p>
+      <p>This page: no analytics, no tracking, no cookies, no external resource requests.</p>
+    </footer>
+  </body>
+</html>
